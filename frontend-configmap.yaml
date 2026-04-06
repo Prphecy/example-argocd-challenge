@@ -16,7 +16,8 @@ data:
 
       <script>
         function callBackend() {
-          fetch('http://192.168.49.2')
+          fetch('http://192.168.49.2', {
+          mode: 'no-cors')}
             .then(res => res.text())
             .then(data => {
               document.getElementById("result").innerText = data;
